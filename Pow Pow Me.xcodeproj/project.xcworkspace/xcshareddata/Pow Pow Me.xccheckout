@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2A6BE960-9BE4-4079-A195-B30267545A73</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Pow Pow Me</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3547191E-E2CB-44EE-B0AB-F85211A6ECDF</key>
+		<string>ssh://github.com/samsoir/pow-pow-me.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Pow Pow Me.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3547191E-E2CB-44EE-B0AB-F85211A6ECDF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/samsoir/pow-pow-me.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3547191E-E2CB-44EE-B0AB-F85211A6ECDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3547191E-E2CB-44EE-B0AB-F85211A6ECDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Pow Pow Me</string>
+		</dict>
+	</array>
+</dict>
+</plist>
