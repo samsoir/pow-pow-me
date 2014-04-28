@@ -18,6 +18,9 @@
 		7B5308BA190DEE81003DFD66 /* MDFRootViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308B9190DEE81003DFD66 /* MDFRootViewControllerTests.m */; };
 		7B5308BD190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308BC190DFC9C003DFD66 /* MDFWelcomeViewController.m */; };
 		7B5308BE190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308BC190DFC9C003DFD66 /* MDFWelcomeViewController.m */; };
+		7B5308C3190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308C2190E0CF5003DFD66 /* MDFAppearanceManager.m */; };
+		7B5308C4190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308C2190E0CF5003DFD66 /* MDFAppearanceManager.m */; };
+		7B5308C6190E0D27003DFD66 /* MDFAppearanceManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308C5190E0D27003DFD66 /* MDFAppearanceManagerTests.m */; };
 		7BA3B91E190D792B000FD2E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91D190D792B000FD2E8 /* Foundation.framework */; };
 		7BA3B920190D792B000FD2E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */; };
 		7BA3B922190D792B000FD2E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B921190D792B000FD2E8 /* UIKit.framework */; };
@@ -63,6 +66,9 @@
 		7B5308B9190DEE81003DFD66 /* MDFRootViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFRootViewControllerTests.m; sourceTree = "<group>"; };
 		7B5308BB190DFC9C003DFD66 /* MDFWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFWelcomeViewController.h; sourceTree = "<group>"; };
 		7B5308BC190DFC9C003DFD66 /* MDFWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFWelcomeViewController.m; sourceTree = "<group>"; };
+		7B5308C1190E0CF5003DFD66 /* MDFAppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFAppearanceManager.h; sourceTree = "<group>"; };
+		7B5308C2190E0CF5003DFD66 /* MDFAppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFAppearanceManager.m; sourceTree = "<group>"; };
+		7B5308C5190E0D27003DFD66 /* MDFAppearanceManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFAppearanceManagerTests.m; sourceTree = "<group>"; };
 		7BA3B91A190D792B000FD2E8 /* Pow Pow Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pow Pow Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA3B91D190D792B000FD2E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +174,23 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		7B5308BF190E0C81003DFD66 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				7B5308C1190E0CF5003DFD66 /* MDFAppearanceManager.h */,
+				7B5308C2190E0CF5003DFD66 /* MDFAppearanceManager.m */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
+		7B5308C0190E0C8A003DFD66 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				7B5308C5190E0D27003DFD66 /* MDFAppearanceManagerTests.m */,
+			);
+			path = Appearance;
+			sourceTree = "<group>";
+		};
 		7BA3B911190D792B000FD2E8 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +228,7 @@
 		7BA3B923190D792B000FD2E8 /* Pow Pow Me */ = {
 			isa = PBXGroup;
 			children = (
+				7B5308BF190E0C81003DFD66 /* Appearance */,
 				7B5308A7190DECE9003DFD66 /* ViewControllers */,
 				7B5308A8190DECE9003DFD66 /* Views */,
 				7BA3B92C190D792B000FD2E8 /* MDFAppDelegate.h */,
@@ -229,6 +253,7 @@
 		7BA3B93C190D792B000FD2E8 /* Pow Pow MeTests */ = {
 			isa = PBXGroup;
 			children = (
+				7B5308C0190E0C8A003DFD66 /* Appearance */,
 				7B5308B8190DEE6D003DFD66 /* ViewControllers */,
 				7B5308A9190DED74003DFD66 /* lib */,
 				7BA3B93D190D792B000FD2E8 /* Supporting Files */,
@@ -379,6 +404,7 @@
 				7B5308B7190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
 				fb0491870ab06e1e042502b7 /* main.m in Sources */,
 				7B5308BE190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
+				7B5308C4190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +416,7 @@
 				7B5308B6190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
 				7BA3B92A190D792B000FD2E8 /* main.m in Sources */,
 				7B5308BD190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
+				7B5308C3190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B5308BA190DEE81003DFD66 /* MDFRootViewControllerTests.m in Sources */,
+				7B5308C6190E0D27003DFD66 /* MDFAppearanceManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

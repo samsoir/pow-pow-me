@@ -44,6 +44,9 @@
     XCTAssertTrue([subject isEqual:subject2], @"%@ should be equal to %@", subject2, subject);
 }
 
-
+- (void)testPreferredStatusBarStyle
+{
+    XCTAssertEqual([[MDFRootViewController rootViewController] preferredStatusBarStyle], UIStatusBarStyleLightContent, @"Bar style should be UIStatusBarStyleLightContent");
+}
 
 @end

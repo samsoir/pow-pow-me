@@ -7,12 +7,15 @@
 //
 
 #import "MDFAppDelegate.h"
+#import "MDFAppearanceManager.h"
 #import "MDFRootViewController.h"
 
 @implementation MDFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MDFAppearanceManager paintApplicationAppearance];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
