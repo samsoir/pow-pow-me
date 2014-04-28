@@ -9,3 +9,4 @@ Feature: Pow! Pow! Me Welcome Screen
   Scenario: Launch app first
     When I launch the application
     Then I should see "Pow! Pow! Me"
+    And I should see a map
