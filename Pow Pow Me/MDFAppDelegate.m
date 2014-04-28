@@ -7,6 +7,7 @@
 //
 
 #import "MDFAppDelegate.h"
+#import "MDFRootViewController.h"
 
 @implementation MDFAppDelegate
 
@@ -14,7 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+
+    [self.window setRootViewController:[self powPowRootViewController]];
+    
+    self.window.backgroundColor = [UIColor colorWithRed:(74/255.0) green:(74/255.0) blue:(74/255.0) alpha:1.0];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -44,6 +48,13 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Pow Pow RootViewController
+
+- (UIViewController *)powPowRootViewController
+{
+    return [MDFRootViewController rootViewController];
 }
 
 @end

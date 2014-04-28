@@ -4,7 +4,7 @@ Feature: Pow! Pow! Me Welcome Screen
   I want to be able to use the app immediately from launch
 
   Background:
-    Given I am currently located in "Chicago"
+    Given I my current location is "41.9732638","-87.6580603"
 
   Scenario: Launch app first
     When I launch the application
