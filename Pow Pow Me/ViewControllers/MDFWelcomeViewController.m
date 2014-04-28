@@ -22,7 +22,7 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
 {
     self.mapView = [self initalizeMapViewForLocation:kMDFCenterMapLocation];
     [self.mapView setFrame:[self.view frame]];
-    [self.view addSubview:self.mapView];    
+    [self.view addSubview:self.mapView];
 }
 
 @end
@@ -47,7 +47,6 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
     [mapView setCenterCoordinate:location];
     [mapView setMapType:MKMapTypeStandard];
     [mapView setPitchEnabled:NO];
-    [mapView setShowsUserLocation:YES];
     
     MKMapCamera *camera = [MKMapCamera cameraLookingAtCenterCoordinate:kMDFCenterMapLocation
                                                      fromEyeCoordinate:kMDFCenterMapLocation
@@ -60,7 +59,7 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
+    [self initializeMapView];
 }
 
 @end
