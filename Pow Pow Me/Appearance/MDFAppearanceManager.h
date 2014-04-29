@@ -19,6 +19,7 @@ FOUNDATION_EXPORT CGFloat const kMDFColorSemiAlphaValue;
 
 + (void)paintApplicationAppearance;
 + (void)paintNavigationAppearance;
++ (void)paintUIButtonAppearance;
 
 #pragma mark - Color Methods
 

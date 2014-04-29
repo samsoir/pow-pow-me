@@ -15,18 +15,6 @@
 
 @implementation MDFAppearanceManagerTests
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
 - (void)testPowPowDarkColor
 {
     UIColor *powPowDarkColor = [UIColor colorWithRed:(74/255.0)
@@ -66,6 +54,14 @@
     UINavigationBar *subject = [UINavigationBar appearance];
     
     XCTAssertEqual([subject barStyle], UIBarStyleBlack, @"Navigation bar should be UIBarStyleBlack");
+}
+
+- (void)testUIButtonAppearance
+{
+    [MDFAppearanceManager paintUIButtonAppearance];
+    UIButton *subject = [UIButton appearance];
+    
+    XCTAssertEqualObjects([subject backgroundColor], [MDFAppearanceManager powPowAccentColor], @"UIButton should have color: %@, got: %@", [MDFAppearanceManager powPowAccentColor], [subject backgroundColor]);
 }
 
 @end

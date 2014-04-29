@@ -20,12 +20,20 @@ CGFloat const kMDFColorSemiAlphaValue    = (CGFloat) 0.6;
 + (void)paintApplicationAppearance
 {
     [MDFAppearanceManager paintNavigationAppearance];
+    [MDFAppearanceManager paintUIButtonAppearance];
 }
 
 + (void)paintNavigationAppearance
 {
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setBarStyle:UIBarStyleBlack];
+    [navigationBar setTintColor:[MDFAppearanceManager powPowAccentColor]];
+}
+
++ (void)paintUIButtonAppearance
+{
+    UIButton *button = [UIButton appearance];
+    [button setBackgroundColor:[MDFAppearanceManager powPowAccentColor]];
 }
 
 #pragma mark - Color Methods

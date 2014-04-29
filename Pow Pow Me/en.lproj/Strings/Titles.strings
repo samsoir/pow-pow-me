@@ -1,0 +1,14 @@
+/* 
+  Titles.strings
+  Pow Pow Me
+
+  Created by Sam de Freyssinet on 28/04/2014.
+  Copyright (c) 2014 Maison de Freyssinet. All rights reserved.
+*/
+
+"PowPowMe" = "Pow! Pow! Me";
+
+/* Welcome Screen */
+
+"Me"       = "Me";
+"Help"     = "Help";
