@@ -64,4 +64,23 @@
     XCTAssertTrue([subject.title isEqualToString:title], @"Bar Button item title should match");
 }
 
+- (void)testPositionViewBelowView
+{
+    CGFloat padding      = 1.0f;
+    CGRect upperViewFrame = CGRectMake(0.0, 0.0, 320.0, 30.0);
+    CGRect lowerViewFrame = CGRectMake(0.0, 0.0, 320.0, 20.0);
+    CGRect expectedFrame  = CGRectMake(0.0, CGRectGetHeight(upperViewFrame) + padding, CGRectGetWidth(lowerViewFrame), CGRectGetHeight(lowerViewFrame));
+    
+    UIView *upperView = [[UIView alloc] initWithFrame:upperViewFrame];
+    UIView *lowerView = [[UIView alloc] initWithFrame:lowerViewFrame];
+    
+    MDFWelcomeViewController *subject = [self generateTestController];
+    
+    [subject positionView:lowerView
+                belowView:upperView
+                  padding:padding];
+    
+    XCTAssertTrue(CGRectEqualToRect(expectedFrame, [lowerView frame]), @"Lower view rect should match expected rect");
+}
+
 @end

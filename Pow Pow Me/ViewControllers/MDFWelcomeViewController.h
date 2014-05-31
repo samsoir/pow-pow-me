@@ -6,17 +6,22 @@
 //  Copyright (c) 2014 Maison de Freyssinet. All rights reserved.
 //
 
+#ifndef __MDFWelcomeViewController__
+#define __MDFWelcomeViewController__
+
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "MDFStatusBar.h"
 
 FOUNDATION_EXPORT CLLocationCoordinate2D const kMDFCenterMapLocation;
 FOUNDATION_EXPORT CLLocationDistance const kMDFMapAltitude;
 
 @interface MDFWelcomeViewController : UIViewController <MKMapViewDelegate>
 
-@property (nonatomic, strong) MKMapView *mapView;
-@property (nonatomic, strong) UIButton *ctaButton;
+@property (nonatomic, weak) MKMapView *mapView;
+@property (nonatomic, weak) UIButton *ctaButton;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
+@property (nonatomic, weak) MDFStatusBar *statusBar;
 
 #pragma mark - Factory Methods
 
@@ -27,6 +32,8 @@ FOUNDATION_EXPORT CLLocationDistance const kMDFMapAltitude;
 
 - (MKMapView *)initalizeMapViewForLocation:(CLLocationCoordinate2D)location;
 - (void)positionButton:(UIButton *)button bottomOfFrame:(CGRect)frame;
+- (void)positionView:(UIView *)lowerView belowView:(UIView *)upperView padding:(CGFloat)padding;
+- (void)showStatusBarWithNumberOfResults:(NSUInteger)numberOfResults;
 
 #pragma mark - Actions
 
@@ -39,3 +46,5 @@ FOUNDATION_EXPORT CLLocationDistance const kMDFMapAltitude;
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation;
 
 @end
+
+#endif

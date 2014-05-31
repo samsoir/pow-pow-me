@@ -10,5 +10,7 @@
 
 /* Welcome Screen */
 
-"Me"       = "Me";
-"Help"     = "Help";
+"Me"                         = "Me";
+"Help"                       = "Help";
+"Loading adventures"         = "Loading adventures";
+"possibe powder adventures"  = "%i possible powder adventures";

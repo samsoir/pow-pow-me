@@ -37,6 +37,7 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
     if (results)
     {
         [self.mapView addAnnotations:results];
+        [self showStatusBarWithNumberOfResults:[results count]];
     }
 }
 
@@ -117,6 +118,21 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
     [self.navigationItem setRightBarButtonItem:barButtonItem];
 }
 
+- (void)initializeStatusBar
+{
+    CGRect navigationBarFrame = [self.navigationController.navigationBar frame];
+
+    CGRect statusBarFrame   = CGRectMake(0.0,
+                                         CGRectGetHeight(navigationBarFrame)+20,
+                                         CGRectGetWidth(navigationBarFrame),
+                                         44.0f);
+    
+    MDFStatusBar *statusBar = [[MDFStatusBar alloc] initWithFrame:statusBarFrame title:nil];
+    
+    [self.view insertSubview:statusBar aboveSubview:self.mapView];
+    [statusBar setStatusBarText:NSLocalizedStringFromTable(@"Loading adventures", @"Titles", @"Loading adventures")];
+    self.statusBar = statusBar;
+}
 
 @end
 
@@ -174,12 +190,30 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
     [button setFrame:buttonFrame];
 }
 
+- (void)positionView:(UIView *)lowerView belowView:(UIView *)upperView padding:(CGFloat)padding
+{
+    CGRect upperViewFrame = [upperView frame];
+    CGRect lowerViewFrame = [lowerView frame];
+    
+    CGRect newLowerViewFrame = CGRectMake(CGRectGetMinX(lowerViewFrame),
+                                          CGRectGetHeight(upperViewFrame)+padding,
+                                          CGRectGetWidth(lowerViewFrame),
+                                          CGRectGetHeight(lowerViewFrame));
+    
+    [lowerView setFrame:newLowerViewFrame];
+}
+
+- (void)viewDidLoad
+{
+    [self initializeMapView];
+    [self initializeStatusBar];
+    [self initializePowPowMeButton];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [self registerForNotifications];
-    [self initializeMapView];
-    [self initializePowPowMeButton];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -187,6 +221,18 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
     [self unsubscribeFromNotifications];
     
     [super viewDidDisappear:animated];
+}
+
+- (void)showStatusBarWithNumberOfResults:(NSUInteger)numberOfResults
+{
+    NSString *resultsTitle = [NSString stringWithFormat:NSLocalizedStringFromTable(@"possibe powder adventures", @"Titles", "possibe powder adventures"), numberOfResults];
+    
+    [self.statusBar setStatusBarText:resultsTitle];
+    [self.statusBar showStatusBar:YES completion:^{
+        
+        NSLog(@"Status bar: %@", self.statusBar);
+        
+    }];
 }
 
 #pragma mark - Actions

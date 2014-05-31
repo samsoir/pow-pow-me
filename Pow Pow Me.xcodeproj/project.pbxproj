@@ -39,6 +39,9 @@
 		7B5308DC190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308DB190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m */; };
 		7B5308E0190F0289003DFD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91D190D792B000FD2E8 /* Foundation.framework */; };
 		7B5308E4190F037C003DFD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91D190D792B000FD2E8 /* Foundation.framework */; };
+		7B94A70919282A4700207A98 /* MDFStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70819282A4700207A98 /* MDFStatusBar.m */; };
+		7B94A70A19282A4700207A98 /* MDFStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70819282A4700207A98 /* MDFStatusBar.m */; };
+		7B94A70C19282C1400207A98 /* MDFStatusBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70B19282C1400207A98 /* MDFStatusBarTests.m */; };
 		7BA3B920190D792B000FD2E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */; };
 		7BA3B922190D792B000FD2E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B921190D792B000FD2E8 /* UIKit.framework */; };
 		7BA3B92A190D792B000FD2E8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA3B929190D792B000FD2E8 /* main.m */; };
@@ -100,6 +103,9 @@
 		7B5308D6190EC13E003DFD66 /* MDFLargeCTAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFLargeCTAButton.m; sourceTree = "<group>"; };
 		7B5308D9190EC1E1003DFD66 /* MDFLargeCTAButtonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFLargeCTAButtonTests.m; sourceTree = "<group>"; };
 		7B5308DB190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFWelcomeViewControllerTests.m; sourceTree = "<group>"; };
+		7B94A70719282A4700207A98 /* MDFStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFStatusBar.h; sourceTree = "<group>"; };
+		7B94A70819282A4700207A98 /* MDFStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFStatusBar.m; sourceTree = "<group>"; };
+		7B94A70B19282C1400207A98 /* MDFStatusBarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFStatusBarTests.m; sourceTree = "<group>"; };
 		7BA3B91A190D792B000FD2E8 /* Pow Pow Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pow Pow Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA3B91D190D792B000FD2E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -221,6 +227,7 @@
 		7B5308A8190DECE9003DFD66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7B94A70519282A1C00207A98 /* StatusBars */,
 				7B5308D1190EC0D6003DFD66 /* Buttons */,
 			);
 			path = Views;
@@ -303,6 +310,7 @@
 		7B5308D2190EC0F7003DFD66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7B94A70619282A2800207A98 /* StatusBars */,
 				7B5308D4190EC111003DFD66 /* Buttons */,
 			);
 			path = Views;
@@ -314,6 +322,23 @@
 				7B5308D9190EC1E1003DFD66 /* MDFLargeCTAButtonTests.m */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		7B94A70519282A1C00207A98 /* StatusBars */ = {
+			isa = PBXGroup;
+			children = (
+				7B94A70719282A4700207A98 /* MDFStatusBar.h */,
+				7B94A70819282A4700207A98 /* MDFStatusBar.m */,
+			);
+			path = StatusBars;
+			sourceTree = "<group>";
+		};
+		7B94A70619282A2800207A98 /* StatusBars */ = {
+			isa = PBXGroup;
+			children = (
+				7B94A70B19282C1400207A98 /* MDFStatusBarTests.m */,
+			);
+			path = StatusBars;
 			sourceTree = "<group>";
 		};
 		7BA3B911190D792B000FD2E8 = {
@@ -543,6 +568,7 @@
 				7B218D41190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
 				7B5308BE190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
 				7B218D3A190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
+				7B94A70A19282A4700207A98 /* MDFStatusBar.m in Sources */,
 				7B218D2E190F04150010E4C2 /* MDFPPMMockClient.m in Sources */,
 				7B5308C4190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
 			);
@@ -559,6 +585,7 @@
 				7B218D40190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
 				7B5308BD190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
 				7B218D39190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
+				7B94A70919282A4700207A98 /* MDFStatusBar.m in Sources */,
 				7B218D2D190F04150010E4C2 /* MDFPPMMockClient.m in Sources */,
 				7B5308C3190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
 			);
@@ -568,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B94A70C19282C1400207A98 /* MDFStatusBarTests.m in Sources */,
 				7B218D3C190F4BB10010E4C2 /* MDFDictionaryToAnnotationDecoratorTests.m in Sources */,
 				7B5308BA190DEE81003DFD66 /* MDFRootViewControllerTests.m in Sources */,
 				7B218D44190F544E0010E4C2 /* MDFFetchGlobalResultsContextTests.m in Sources */,

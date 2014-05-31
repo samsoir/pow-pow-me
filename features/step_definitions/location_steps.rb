@@ -3,5 +3,5 @@ Given(/^my current location is "(.*?)","(.*?)"$/) do |arg1, arg2|
 end
 
 Then(/^I should see map search results$/) do
-    pending # express the regexp above with the code you wish you had
+  element_exists("view:'mkannotationview'")
 end

@@ -17,7 +17,7 @@
 
 - (NSNumber *)globalSearchResultsAvailable
 {
-    return @234;
+    return [NSNumber numberWithInteger:[[self loadGlobalSearchResultsFromPlist] count]];
 }
 
 @end
