@@ -1,6 +1,6 @@
 Feature: Pow! Pow! Me Welcome Screen
-  As a Pow! Pow! Me new customer
   In order to understand the product quickly
+  As a Pow! Pow! Me new customer
   I want to be able to use the app immediately from launch
 
   Background:
