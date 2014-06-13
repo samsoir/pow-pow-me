@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MDFTuneMyPowPowViewController : UIViewController
+@interface MDFTuneMyPowPowViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, weak) UITableView *tableView;
 
 #pragma mark - Actions
 

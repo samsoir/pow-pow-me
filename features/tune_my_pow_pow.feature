@@ -3,7 +3,6 @@ Feature: Tune My Pow! Pow!
   As a Pow! Pow! Me customer
   I want to be able to set search paramters before searching
 
-  @focus
   Scenario: Tune My Pow! Pow!
     Given I am on the welcome screen
     When I touch the "Pow! Pow! Me" button

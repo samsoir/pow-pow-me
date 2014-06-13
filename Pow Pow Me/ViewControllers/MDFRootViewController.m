@@ -37,7 +37,7 @@
 {
     MDFTuneMyPowPowViewController *controller = [self initalizeTuneMyPowPowViewController];
 
-    [self.navigationController pushViewController:controller animated:YES];
+    [self presentViewController:[self mainNavigationController:controller] animated:YES completion:nil];
 }
 
 @end
