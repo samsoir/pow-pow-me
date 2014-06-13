@@ -8,6 +8,39 @@
 
 #import "MDFRootViewController.h"
 #import "MDFWelcomeViewController.h"
+#import "MDFTuneMyPowPowViewController.h"
+
+@interface MDFRootViewController(MainViewMethods)
+
+- (UINavigationController *)mainNavigationController:(UIViewController *)rootViewController;
+- (MDFWelcomeViewController *)initializeWelcomeViewController;
+- (MDFTuneMyPowPowViewController *)initalizeTuneMyPowPowViewController;
+
+@end
+
+@implementation MDFRootViewController(Events)
+
+- (void)registerForNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveTuneMyPowPowNotification:)
+                                                 name:kMDFWelcomeViewControllerDidTouchPowPowMeNotification
+                                               object:nil];
+}
+
+- (void)unsubscribeFromNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)didReceiveTuneMyPowPowNotification:(NSNotification *)notification
+{
+    MDFTuneMyPowPowViewController *controller = [self initalizeTuneMyPowPowViewController];
+
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+@end
 
 @implementation MDFRootViewController(MainViewMethods)
 
@@ -19,6 +52,11 @@
 - (MDFWelcomeViewController *)initializeWelcomeViewController
 {
     return [[MDFWelcomeViewController alloc] initWithNibName:nil bundle:nil];
+}
+
+- (MDFTuneMyPowPowViewController *)initalizeTuneMyPowPowViewController
+{
+    return [[MDFTuneMyPowPowViewController alloc] initWithNibName:nil bundle:nil];
 }
 
 @end
@@ -58,6 +96,18 @@
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self registerForNotifications];
+}
+
+- (void)dealloc
+{
+    [self unsubscribeFromNotifications];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "MDFWelcomeViewController.h"
 
 @interface MDFWelcomeViewControllerTests : XCTestCase
@@ -81,6 +82,26 @@
                   padding:padding];
     
     XCTAssertTrue(CGRectEqualToRect(expectedFrame, [lowerView frame]), @"Lower view rect should match expected rect");
+}
+
+- (void)testPowPowMeNotification
+{
+    id observerMock = [OCMockObject observerMock];
+    [[NSNotificationCenter defaultCenter] addMockObserver:observerMock name:kMDFWelcomeViewControllerDidTouchPowPowMeNotification object:nil];
+    
+    [[observerMock expect] notificationWithName:kMDFWelcomeViewControllerDidTouchPowPowMeNotification object:[OCMArg any]];
+    
+    MDFWelcomeViewController *subject = [self generateTestController];
+
+    [subject powPowMe:nil];
+    
+    @try {
+        [observerMock verify];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Execption caught: %@", exception);
+        XCTFail(@"Expected notificiation '%@' was not received!", kMDFWelcomeViewControllerDidTouchPowPowMeNotification);
+    }
 }
 
 @end

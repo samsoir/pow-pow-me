@@ -7,7 +7,7 @@ Feature: Tune My Pow! Pow!
   Scenario: Tune My Pow! Pow!
     Given I am on the welcome screen
     When I touch the "Pow! Pow! Me" button
-    Then I should see "Tune My Pow! Pow!
+    Then I should see "Tune My Pow! Pow!"
 
   Scenario: Perform tuned search
     Given I am on the "Tune My Pow! Pow!" screen

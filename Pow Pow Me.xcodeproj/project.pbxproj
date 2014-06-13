@@ -39,6 +39,8 @@
 		7B5308DC190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5308DB190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m */; };
 		7B5308E0190F0289003DFD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91D190D792B000FD2E8 /* Foundation.framework */; };
 		7B5308E4190F037C003DFD66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91D190D792B000FD2E8 /* Foundation.framework */; };
+		7B8D2DB1194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D2DB0194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m */; };
+		7B8D2DB2194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B8D2DB0194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m */; };
 		7B94A70919282A4700207A98 /* MDFStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70819282A4700207A98 /* MDFStatusBar.m */; };
 		7B94A70A19282A4700207A98 /* MDFStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70819282A4700207A98 /* MDFStatusBar.m */; };
 		7B94A70C19282C1400207A98 /* MDFStatusBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B94A70B19282C1400207A98 /* MDFStatusBarTests.m */; };
@@ -103,6 +105,8 @@
 		7B5308D6190EC13E003DFD66 /* MDFLargeCTAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFLargeCTAButton.m; sourceTree = "<group>"; };
 		7B5308D9190EC1E1003DFD66 /* MDFLargeCTAButtonTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFLargeCTAButtonTests.m; sourceTree = "<group>"; };
 		7B5308DB190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFWelcomeViewControllerTests.m; sourceTree = "<group>"; };
+		7B8D2DAF194BA31D004A65C9 /* MDFTuneMyPowPowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFTuneMyPowPowViewController.h; sourceTree = "<group>"; };
+		7B8D2DB0194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFTuneMyPowPowViewController.m; sourceTree = "<group>"; };
 		7B94A70719282A4700207A98 /* MDFStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFStatusBar.h; sourceTree = "<group>"; };
 		7B94A70819282A4700207A98 /* MDFStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFStatusBar.m; sourceTree = "<group>"; };
 		7B94A70B19282C1400207A98 /* MDFStatusBarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFStatusBarTests.m; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 				7B5308B5190DEDFD003DFD66 /* MDFRootViewController.m */,
 				7B5308BB190DFC9C003DFD66 /* MDFWelcomeViewController.h */,
 				7B5308BC190DFC9C003DFD66 /* MDFWelcomeViewController.m */,
+				7B8D2DAF194BA31D004A65C9 /* MDFTuneMyPowPowViewController.h */,
+				7B8D2DB0194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -566,6 +572,7 @@
 				7B5308B7190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
 				fb0491870ab06e1e042502b7 /* main.m in Sources */,
 				7B218D41190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
+				7B8D2DB2194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */,
 				7B5308BE190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
 				7B218D3A190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
 				7B94A70A19282A4700207A98 /* MDFStatusBar.m in Sources */,
@@ -583,6 +590,7 @@
 				7B5308B6190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
 				7BA3B92A190D792B000FD2E8 /* main.m in Sources */,
 				7B218D40190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
+				7B8D2DB1194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */,
 				7B5308BD190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
 				7B218D39190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
 				7B94A70919282A4700207A98 /* MDFStatusBar.m in Sources */,

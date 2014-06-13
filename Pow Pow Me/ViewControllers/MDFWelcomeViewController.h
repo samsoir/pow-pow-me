@@ -16,6 +16,8 @@
 FOUNDATION_EXPORT CLLocationCoordinate2D const kMDFCenterMapLocation;
 FOUNDATION_EXPORT CLLocationDistance const kMDFMapAltitude;
 
+FOUNDATION_EXPORT NSString *const kMDFWelcomeViewControllerDidTouchPowPowMeNotification;
+
 @interface MDFWelcomeViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, weak) MKMapView *mapView;

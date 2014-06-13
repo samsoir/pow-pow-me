@@ -15,6 +15,8 @@
 CLLocationCoordinate2D const kMDFCenterMapLocation = {39.828127, -98.579404};
 CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
 
+NSString *const kMDFWelcomeViewControllerDidTouchPowPowMeNotification = @"net.reyssi.def:kMDFWelcomeViewControllerDidTouchPowPowMeNotification";
+
 @implementation MDFWelcomeViewController(Events)
 
 - (void)registerForNotifications
@@ -39,6 +41,12 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
         [self.mapView addAnnotations:results];
         [self showStatusBarWithNumberOfResults:[results count]];
     }
+}
+
+- (void)sendButtonTouchUpNotification:(NSString *)name sender:(id)sender
+{
+    NSNotification *notification = [NSNotification notificationWithName:name object:sender];
+    [[NSNotificationCenter defaultCenter] postNotification:notification];
 }
 
 @end
@@ -239,7 +247,7 @@ CLLocationDistance const kMDFMapAltitude = (CLLocationDistance)15000000.0;
 
 - (IBAction)powPowMe:(id)sender
 {
-    NSLog(@"Button was pushed: %@", sender);
+    [self sendButtonTouchUpNotification:kMDFWelcomeViewControllerDidTouchPowPowMeNotification sender:sender];
 }
 
 - (IBAction)accountManagement:(id)sender
