@@ -10,8 +10,8 @@ Feature: Tune My Pow! Pow!
 
   Scenario: Perform tuned search
     Given I am on the "Tune My Pow! Pow!" screen
-    When I touch the "average price range" button
-    And I touch the "five or more hours travel time" button
-    And I touch the "long weekend on the mountain" button
+    When I touch "average price range"
+    And I touch "five or more hours travel time"
+    And I touch "long weekend on the mountain"
     And I touch the "Lets Go!" button
     Then I should see "Shredding Pow! Pow!"

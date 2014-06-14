@@ -21,6 +21,7 @@ CGFloat const kMDFColorSemiAlphaValue    = (CGFloat) 0.6;
 {
     [MDFAppearanceManager paintNavigationAppearance];
     [MDFAppearanceManager paintUIButtonAppearance];
+    [MDFAppearanceManager paintUISegmentedControlAppearance];
 }
 
 + (void)paintNavigationAppearance
@@ -34,6 +35,14 @@ CGFloat const kMDFColorSemiAlphaValue    = (CGFloat) 0.6;
 {
     UIButton *button = [UIButton appearance];
     [button setBackgroundColor:[MDFAppearanceManager powPowAccentColor]];
+}
+
++ (void)paintUISegmentedControlAppearance
+{
+    UISegmentedControl *segmentedControl = [UISegmentedControl appearance];
+    [segmentedControl setTintColor:[MDFAppearanceManager powPowAccentColor]];
+    [segmentedControl setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]
+                                               } forState:UIControlStateSelected];
 }
 
 #pragma mark - Color Methods

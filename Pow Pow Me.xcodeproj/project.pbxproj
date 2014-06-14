@@ -54,6 +54,9 @@
 		7BA3B939190D792B000FD2E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B921190D792B000FD2E8 /* UIKit.framework */; };
 		7BA3B941190D792B000FD2E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BA3B93F190D792B000FD2E8 /* InfoPlist.strings */; };
 		7BA3B94D190D7BF2000FD2E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B94C190D7BF2000FD2E8 /* MapKit.framework */; };
+		7BEFEF60194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF5F194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m */; };
+		7BEFEF61194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF5F194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m */; };
+		7BEFEF64194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF63194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m */; };
 		987e20d3673776e80bbe00f7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */; };
 		c1cf3cd42a6a95187eb9ed5d /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23c054adf385020ce3ce21dd /* CFNetwork.framework */; };
 		f1d3f42184f4be6112b8cff2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA3B92F190D792B000FD2E8 /* Images.xcassets */; };
@@ -125,6 +128,9 @@
 		7BA3B93E190D792B000FD2E8 /* Pow Pow MeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pow Pow MeTests-Info.plist"; sourceTree = "<group>"; };
 		7BA3B940190D792B000FD2E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BA3B94C190D7BF2000FD2E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7BEFEF5E194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFSegmentedControlTableViewCell.h; sourceTree = "<group>"; };
+		7BEFEF5F194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFSegmentedControlTableViewCell.m; sourceTree = "<group>"; };
+		7BEFEF63194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFSegmentedControlTableViewCellTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +239,7 @@
 		7B5308A8190DECE9003DFD66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BEFEF5D194CE532006E4AE4 /* TableViewCells */,
 				7B94A70519282A1C00207A98 /* StatusBars */,
 				7B5308D1190EC0D6003DFD66 /* Buttons */,
 			);
@@ -316,6 +323,7 @@
 		7B5308D2190EC0F7003DFD66 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BEFEF62194CE63E006E4AE4 /* TableViewCells */,
 				7B94A70619282A2800207A98 /* StatusBars */,
 				7B5308D4190EC111003DFD66 /* Buttons */,
 			);
@@ -431,6 +439,23 @@
 				7BA3B93F190D792B000FD2E8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7BEFEF5D194CE532006E4AE4 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7BEFEF5E194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.h */,
+				7BEFEF5F194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		7BEFEF62194CE63E006E4AE4 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				7BEFEF63194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -567,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEFEF61194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m in Sources */,
 				7B5308D8190EC13E003DFD66 /* MDFLargeCTAButton.m in Sources */,
 				2f896949d3d2f65337b2e94e /* MDFAppDelegate.m in Sources */,
 				7B5308B7190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
@@ -585,6 +611,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BEFEF60194CE54E006E4AE4 /* MDFSegmentedControlTableViewCell.m in Sources */,
 				7B5308D7190EC13E003DFD66 /* MDFLargeCTAButton.m in Sources */,
 				7BA3B92E190D792B000FD2E8 /* MDFAppDelegate.m in Sources */,
 				7B5308B6190DEDFD003DFD66 /* MDFRootViewController.m in Sources */,
@@ -607,6 +634,7 @@
 				7B218D3C190F4BB10010E4C2 /* MDFDictionaryToAnnotationDecoratorTests.m in Sources */,
 				7B5308BA190DEE81003DFD66 /* MDFRootViewControllerTests.m in Sources */,
 				7B218D44190F544E0010E4C2 /* MDFFetchGlobalResultsContextTests.m in Sources */,
+				7BEFEF64194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m in Sources */,
 				7B5308DA190EC1E1003DFD66 /* MDFLargeCTAButtonTests.m in Sources */,
 				7B5308C6190E0D27003DFD66 /* MDFAppearanceManagerTests.m in Sources */,
 				7B5308DC190EC6E4003DFD66 /* MDFWelcomeViewControllerTests.m in Sources */,
