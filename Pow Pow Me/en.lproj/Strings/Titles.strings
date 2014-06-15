@@ -45,3 +45,7 @@
 
 "week"              = "week";
 "weekOnMountain"    = "week or more on the mountain";
+
+/* Searching */
+"searchingTitle"    = "Shredding Pow! Pow!";
+"searchingMessage"  = "Bear with us while we search through thousands of potential powder expereinces to find the best three just for you!";

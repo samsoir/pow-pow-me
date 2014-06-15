@@ -8,6 +8,7 @@
 
 #import "MDFTuneMyPowPowViewController.h"
 #import "MDFSegmentedControlTableViewCell.h"
+#import "MDFSearchInterstitialViewController.h"
 
 NSInteger const kMDFTuneMyPowPowViewTableControllerSections      = 4;
 NSInteger const kMDFTuneMyPowPowViewTableControllerRows          = 1;
@@ -172,6 +173,11 @@ NSString *const kMDFTuneMyPowPowViewTableViewCellReuseIdentifier = @"net.reyssi.
     }
 }
 
+- (MDFSearchInterstitialViewController *)searchController
+{
+    return [[MDFSearchInterstitialViewController alloc] initWithNibName:nil bundle:nil];
+}
+
 - (id<MDFSegmentedControlTableViewCell>)cellForSegmentedControl
 {
     return [[MDFSegmentedControlTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
@@ -268,6 +274,8 @@ NSString *const kMDFTuneMyPowPowViewTableViewCellReuseIdentifier = @"net.reyssi.
 - (IBAction)search:(id)sender
 {
     NSLog(@"Search button pushed: %@", sender);
+    
+    [self.navigationController pushViewController:[self searchController] animated:YES];
 }
 
 #pragma mark - UITableViewDataSource methods
