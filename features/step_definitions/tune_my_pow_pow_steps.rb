@@ -5,3 +5,9 @@ Given(/^I am on the "(.*?)" screen$/) do |arg1|
     Then I should see "Tune My Pow! Pow!"
   }
 end
+
+Then(/^I should see the searching interstitial$/) do
+  steps %Q{
+    Then I should see "Shredding Pow! Pow!"
+  }
+end

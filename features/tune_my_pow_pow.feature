@@ -14,4 +14,4 @@ Feature: Tune My Pow! Pow!
     And I touch "five or more hours travel time"
     And I touch "long weekend on the mountain"
     And I touch the "Lets Go!" button
-    Then I should see "Shredding Pow! Pow!"
+    Then I should see the searching interstitial

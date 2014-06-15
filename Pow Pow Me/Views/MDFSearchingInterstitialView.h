@@ -17,5 +17,7 @@
 
 - (CGRect)rectForSearchingImageInFrame:(CGRect)frame;
 - (CGRect)rectForTitleLabelInFrame:(CGRect)frame;
+- (CGRect)rectForMessageLabelInFrame:(CGRect)frame padding:(CGFloat)padding;
+- (CGRect)rectForActivityIndicatorInFrame:(CGRect)frame;
 
 @end

@@ -14,11 +14,15 @@
 {
     self.searchingImage = [self searchingImageView];
     self.searchingTitle = [self searchingTitleLabel];
+    self.searchingMessage = [self searchingMessageLabel];
     self.activityIndicator = [self searchingActivityIndicator];
     
     [self addSubview:self.searchingImage];
     [self addSubview:self.searchingTitle];
+    [self addSubview:self.searchingMessage];
     [self addSubview:self.activityIndicator];
+    
+    [self.activityIndicator startAnimating];
 }
 
 - (UIActivityIndicatorView *)searchingActivityIndicator
@@ -53,6 +57,24 @@
     return titleLabel;
 }
 
+- (UILabel *)searchingMessageLabel
+{
+    NSString *searchMessage = NSLocalizedStringFromTable(@"searchingMessage", @"Titles", @"searchingMessage");
+    UILabel *messageLabel = [[UILabel alloc] init];
+    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
+    [style setLineHeightMultiple:1.25f];
+    [style setAlignment:NSTextAlignmentCenter];
+    UIFont *messageLabelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:13.0f];
+
+    
+    NSAttributedString *searchMessageAttributedString = [[NSAttributedString alloc] initWithString:searchMessage attributes:@{NSParagraphStyleAttributeName: style, NSFontAttributeName: messageLabelFont, NSForegroundColorAttributeName: [UIColor whiteColor]}];
+    
+    [messageLabel setAttributedText:searchMessageAttributedString];
+    [messageLabel setNumberOfLines:3];
+    
+    return messageLabel;
+}
+
 @end
 
 @implementation MDFSearchingInterstitialView
@@ -78,6 +100,8 @@
     
     [self.searchingImage setFrame:[self rectForSearchingImageInFrame:frame]];
     [self.searchingTitle setFrame:[self rectForTitleLabelInFrame:frame]];
+    [self.searchingMessage setFrame:[self rectForMessageLabelInFrame:frame padding:17.0f]];
+    [self.activityIndicator setFrame:[self rectForActivityIndicatorInFrame:frame]];
 }
 
 #pragma mark - Presentation
@@ -98,6 +122,25 @@
     CGFloat yCoord                        = CGRectGetHeight(frame) / 2.0;
     
     return CGRectMake(xCoord, yCoord, CGRectGetWidth(frame), height);
+}
+
+- (CGRect)rectForMessageLabelInFrame:(CGRect)frame padding:(CGFloat)padding
+{
+    CGFloat width  = CGRectGetWidth(frame) - (2.0f * padding);
+    CGFloat xCoord = (CGRectGetWidth(frame) / 2.0f) - (width / 2.0f);
+    CGFloat yCoord = CGRectGetHeight(frame) / 1.7;
+    CGFloat height = 80.0f;
+    
+    return CGRectMake(xCoord, yCoord, width, height);
+}
+
+- (CGRect)rectForActivityIndicatorInFrame:(CGRect)frame
+{
+    CGRect activityIndicatorRect = [self.activityIndicator frame];
+    CGFloat xCoord               = (CGRectGetWidth(frame) / 2.0f) - (CGRectGetWidth(activityIndicatorRect) / 2.0f);
+    CGFloat yCoord               = CGRectGetHeight(frame) / 1.3;
+    
+    return CGRectMake(xCoord, yCoord, CGRectGetWidth(activityIndicatorRect), CGRectGetHeight(activityIndicatorRect));
 }
 
 @end

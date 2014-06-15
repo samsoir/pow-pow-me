@@ -21,9 +21,15 @@
     return [[MDFSegmentedControlTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
 }
 
+- (id)partialMockSegmentedControl
+{
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] init];
+    return [OCMockObject partialMockForObject:segmentedControl];
+}
+
 - (void)testSetSegmentedControl
 {
-    id mockSegmentedControl = [OCMockObject mockForClass:[UISegmentedControl class]];
+    id mockSegmentedControl = [self partialMockSegmentedControl];
     
     MDFSegmentedControlTableViewCell *subject = [self subject];
     
