@@ -29,11 +29,10 @@ NSString * const kMDFFetchGlobalSearchResultsContextStarted = @"net.reyssi.def:P
 
 - (id)initWithClient:(id<MDFPPMClientProtocol>)client decorator:(Class<MDFDictionaryToAnnotationDecoratorProtocol>)decorator
 {
-    self = [super init];
+    self = [super initWithClient:client];
     
     if (self)
     {
-        [self setClient:client];
         [self setDecorator:decorator];
     }
     
@@ -48,7 +47,9 @@ NSString * const kMDFFetchGlobalSearchResultsContextStarted = @"net.reyssi.def:P
     
     [self notifyOfContextStart];
     
-    NSArray *results = [self.client fetchGlobalSearchResultsForLatitude:0.0 longitude:0.0];
+    MDFClient2DGeoLocation location = MDFClient2DGeoLocationMake(0.0f, 0.0f);
+    
+    NSArray *results = [self.client fetchGlobalSearchResultsFor2DLocation:location];
     NSMutableArray *decoratedResults = [NSMutableArray arrayWithCapacity:[results count]];
     
     [results enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {

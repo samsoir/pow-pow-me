@@ -12,11 +12,10 @@
 FOUNDATION_EXPORT NSString * const kMDFFetchGlobalSearchResultsContextCompleted;
 FOUNDATION_EXPORT NSString * const kMDFFetchGlobalSearchResultsContextStarted;
 
-#import <Foundation/Foundation.h>
+#import "MDFClientOperation.h"
 #import "MDFDictionaryToAnnotationDecorator.h"
-#import "MDFPPMMockClient.h"
 
-@interface MDFFetchGlobalSearchResultsContext : NSOperation
+@interface MDFFetchGlobalSearchResultsContext : MDFClientOperation
 
 @property (nonatomic, assign) Class<MDFDictionaryToAnnotationDecoratorProtocol> decorator;
 @property (nonatomic, strong) id<MDFPPMClientProtocol> client;

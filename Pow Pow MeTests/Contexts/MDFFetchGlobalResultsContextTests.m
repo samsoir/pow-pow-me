@@ -62,7 +62,9 @@
     
     Class<MDFDictionaryToAnnotationDecoratorProtocol> decoratorClass = [MDFDictionaryToAnnotationDecorator class];
 
-    [[[mockClient stub] andReturn:[self fixture]] fetchGlobalSearchResultsForLatitude:(CGFloat)0.0 longitude:(CGFloat)0.0];
+    MDFClient2DGeoLocation location = MDFClient2DGeoLocationMake(0.0f, 0.0f);
+    
+    [[[mockClient stub] andReturn:[self fixture]] fetchGlobalSearchResultsFor2DLocation:location];
     
     MDFFetchGlobalSearchResultsContext *subject = [[MDFFetchGlobalSearchResultsContext alloc] initWithClient:mockClient decorator:decoratorClass];
 

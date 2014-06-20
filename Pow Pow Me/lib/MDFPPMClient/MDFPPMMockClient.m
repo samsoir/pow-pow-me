@@ -8,6 +8,18 @@
 
 #import "MDFPPMMockClient.h"
 
+MDFClient2DGeoLocation MDFClient2DGeoLocationMake(CGFloat latitude, CGFloat longitude)
+{
+    MDFClient2DGeoLocation clientLocation = {latitude, longitude};
+    
+    return clientLocation;
+}
+
+bool MDFClient2DGeoLocationEqualTo2DGeoLocation(MDFClient2DGeoLocation firstLocation, MDFClient2DGeoLocation secondLocation)
+{
+    return (bool) ((firstLocation.latitude == secondLocation.latitude) && (firstLocation.longitude == secondLocation.longitude));
+}
+
 @implementation MDFPPMMockClient(Plist)
 
 - (NSArray *)loadGlobalSearchResultsFromPlist
@@ -25,7 +37,7 @@
 @implementation MDFPPMMockClient
 
 
-- (NSArray *)fetchGlobalSearchResultsForLatitude:(CGFloat)latitude longitude:(CGFloat)longitude
+- (NSArray *)fetchGlobalSearchResultsFor2DLocation:(MDFClient2DGeoLocation)location
 {
     return [self loadGlobalSearchResultsFromPlist];
 }
@@ -33,6 +45,13 @@
 - (NSNumber *)fetchGlobalSearchResultsAvailable
 {
     return [self globalSearchResultsAvailable];
+}
+
+- (NSSet *)fetchSearchResultsFor2DLocation:(MDFClient2DGeoLocation)location options:(NSDictionary *)options
+{
+    NSSet *resultsSet = [NSSet setWithArray:[[self loadGlobalSearchResultsFromPlist] subarrayWithRange:NSMakeRange(0, 3)]];
+    
+    return resultsSet;
 }
 
 @end

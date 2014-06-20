@@ -1,14 +1,13 @@
 When(/^I search for a far away, average priced, long weekend on the mountain$/) do
-  pending
-#  steps %Q{
-#    Given I am on the "Tune My Pow! Pow!" screen
-#    When I touch "average price range"
-#    And I touch "five or more hours travel time"
-#    And I touch "long weekend on the mountain"
-#    And I touch the "Lets Go!" button
-#    Then I should see the searching interstitial
-#    And I wait to see a navigation bar titled "Pow! Pow! Me"
-#  }
+  steps %Q{
+    Given I am on the "Tune My Pow! Pow!" screen
+    When I touch "average price range"
+    And I touch "five or more hours travel time"
+    And I touch "long weekend on the mountain"
+    And I touch the "Lets Go!" button
+    Then I should see the searching interstitial
+    And I wait to see a navigation bar titled "Pow! Pow! Me"
+  }
 end
 
 Then(/^I should see (\d+) search results$/) do |arg1|

@@ -62,6 +62,13 @@
 		7BEFEF6B194D1A19006E4AE4 /* MDFSearchingInterstitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF6A194D1A19006E4AE4 /* MDFSearchingInterstitialView.m */; };
 		7BEFEF6C194D1A19006E4AE4 /* MDFSearchingInterstitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF6A194D1A19006E4AE4 /* MDFSearchingInterstitialView.m */; };
 		7BEFEF6E194D1E66006E4AE4 /* MDFSearchingInterstitialViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF6D194D1E66006E4AE4 /* MDFSearchingInterstitialViewTests.m */; };
+		7BEFEF711953E432006E4AE4 /* MDFSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF701953E432006E4AE4 /* MDFSearchResultsViewController.m */; };
+		7BEFEF721953E432006E4AE4 /* MDFSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF701953E432006E4AE4 /* MDFSearchResultsViewController.m */; };
+		7BEFEF751954A51B006E4AE4 /* MDFFetchSearchResultsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF741954A51B006E4AE4 /* MDFFetchSearchResultsContext.m */; };
+		7BEFEF761954A51B006E4AE4 /* MDFFetchSearchResultsContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF741954A51B006E4AE4 /* MDFFetchSearchResultsContext.m */; };
+		7BEFEF791954A550006E4AE4 /* MDFClientOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF781954A550006E4AE4 /* MDFClientOperation.m */; };
+		7BEFEF7A1954A550006E4AE4 /* MDFClientOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF781954A550006E4AE4 /* MDFClientOperation.m */; };
+		7BEFEF7C1954A622006E4AE4 /* MDFFetchSearchResultsContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BEFEF7B1954A622006E4AE4 /* MDFFetchSearchResultsContextTests.m */; };
 		987e20d3673776e80bbe00f7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA3B91F190D792B000FD2E8 /* CoreGraphics.framework */; };
 		c1cf3cd42a6a95187eb9ed5d /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23c054adf385020ce3ce21dd /* CFNetwork.framework */; };
 		f1d3f42184f4be6112b8cff2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA3B92F190D792B000FD2E8 /* Images.xcassets */; };
@@ -141,6 +148,13 @@
 		7BEFEF69194D1A19006E4AE4 /* MDFSearchingInterstitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFSearchingInterstitialView.h; sourceTree = "<group>"; };
 		7BEFEF6A194D1A19006E4AE4 /* MDFSearchingInterstitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFSearchingInterstitialView.m; sourceTree = "<group>"; };
 		7BEFEF6D194D1E66006E4AE4 /* MDFSearchingInterstitialViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFSearchingInterstitialViewTests.m; sourceTree = "<group>"; };
+		7BEFEF6F1953E432006E4AE4 /* MDFSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFSearchResultsViewController.h; sourceTree = "<group>"; };
+		7BEFEF701953E432006E4AE4 /* MDFSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFSearchResultsViewController.m; sourceTree = "<group>"; };
+		7BEFEF731954A51B006E4AE4 /* MDFFetchSearchResultsContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFFetchSearchResultsContext.h; sourceTree = "<group>"; };
+		7BEFEF741954A51B006E4AE4 /* MDFFetchSearchResultsContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFFetchSearchResultsContext.m; sourceTree = "<group>"; };
+		7BEFEF771954A550006E4AE4 /* MDFClientOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDFClientOperation.h; sourceTree = "<group>"; };
+		7BEFEF781954A550006E4AE4 /* MDFClientOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFClientOperation.m; sourceTree = "<group>"; };
+		7BEFEF7B1954A622006E4AE4 /* MDFFetchSearchResultsContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDFFetchSearchResultsContextTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +218,10 @@
 			children = (
 				7B218D3E190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.h */,
 				7B218D3F190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m */,
+				7BEFEF731954A51B006E4AE4 /* MDFFetchSearchResultsContext.h */,
+				7BEFEF741954A51B006E4AE4 /* MDFFetchSearchResultsContext.m */,
+				7BEFEF771954A550006E4AE4 /* MDFClientOperation.h */,
+				7BEFEF781954A550006E4AE4 /* MDFClientOperation.m */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -212,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				7B218D43190F544E0010E4C2 /* MDFFetchGlobalResultsContextTests.m */,
+				7BEFEF7B1954A622006E4AE4 /* MDFFetchSearchResultsContextTests.m */,
 			);
 			path = Contexts;
 			sourceTree = "<group>";
@@ -244,6 +263,8 @@
 				7B8D2DB0194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m */,
 				7BEFEF65194D1731006E4AE4 /* MDFSearchInterstitialViewController.h */,
 				7BEFEF66194D1731006E4AE4 /* MDFSearchInterstitialViewController.m */,
+				7BEFEF6F1953E432006E4AE4 /* MDFSearchResultsViewController.h */,
+				7BEFEF701953E432006E4AE4 /* MDFSearchResultsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -614,13 +635,16 @@
 				fb0491870ab06e1e042502b7 /* main.m in Sources */,
 				7B218D41190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
 				7B8D2DB2194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */,
+				7BEFEF761954A51B006E4AE4 /* MDFFetchSearchResultsContext.m in Sources */,
 				7B5308BE190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
+				7BEFEF7A1954A550006E4AE4 /* MDFClientOperation.m in Sources */,
 				7B218D3A190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
 				7BEFEF6C194D1A19006E4AE4 /* MDFSearchingInterstitialView.m in Sources */,
 				7BEFEF68194D1731006E4AE4 /* MDFSearchInterstitialViewController.m in Sources */,
 				7B94A70A19282A4700207A98 /* MDFStatusBar.m in Sources */,
 				7B218D2E190F04150010E4C2 /* MDFPPMMockClient.m in Sources */,
 				7B5308C4190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
+				7BEFEF721953E432006E4AE4 /* MDFSearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,13 +659,16 @@
 				7BA3B92A190D792B000FD2E8 /* main.m in Sources */,
 				7B218D40190F512E0010E4C2 /* MDFFetchGlobalSearchResultsContext.m in Sources */,
 				7B8D2DB1194BA31D004A65C9 /* MDFTuneMyPowPowViewController.m in Sources */,
+				7BEFEF751954A51B006E4AE4 /* MDFFetchSearchResultsContext.m in Sources */,
 				7B5308BD190DFC9C003DFD66 /* MDFWelcomeViewController.m in Sources */,
+				7BEFEF791954A550006E4AE4 /* MDFClientOperation.m in Sources */,
 				7B218D39190F4B9A0010E4C2 /* MDFDictionaryToAnnotationDecorator.m in Sources */,
 				7BEFEF6B194D1A19006E4AE4 /* MDFSearchingInterstitialView.m in Sources */,
 				7BEFEF67194D1731006E4AE4 /* MDFSearchInterstitialViewController.m in Sources */,
 				7B94A70919282A4700207A98 /* MDFStatusBar.m in Sources */,
 				7B218D2D190F04150010E4C2 /* MDFPPMMockClient.m in Sources */,
 				7B5308C3190E0CF5003DFD66 /* MDFAppearanceManager.m in Sources */,
+				7BEFEF711953E432006E4AE4 /* MDFSearchResultsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +679,7 @@
 				7B94A70C19282C1400207A98 /* MDFStatusBarTests.m in Sources */,
 				7B218D3C190F4BB10010E4C2 /* MDFDictionaryToAnnotationDecoratorTests.m in Sources */,
 				7BEFEF6E194D1E66006E4AE4 /* MDFSearchingInterstitialViewTests.m in Sources */,
+				7BEFEF7C1954A622006E4AE4 /* MDFFetchSearchResultsContextTests.m in Sources */,
 				7B5308BA190DEE81003DFD66 /* MDFRootViewControllerTests.m in Sources */,
 				7B218D44190F544E0010E4C2 /* MDFFetchGlobalResultsContextTests.m in Sources */,
 				7BEFEF64194CE656006E4AE4 /* MDFSegmentedControlTableViewCellTests.m in Sources */,

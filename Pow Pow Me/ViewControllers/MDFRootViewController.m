@@ -9,12 +9,21 @@
 #import "MDFRootViewController.h"
 #import "MDFWelcomeViewController.h"
 #import "MDFTuneMyPowPowViewController.h"
+#import "MDFSearchResultsViewController.h"
+#import "MDFFetchSearchResultsContext.h"
 
 @interface MDFRootViewController(MainViewMethods)
 
 - (UINavigationController *)mainNavigationController:(UIViewController *)rootViewController;
 - (MDFWelcomeViewController *)initializeWelcomeViewController;
 - (MDFTuneMyPowPowViewController *)initalizeTuneMyPowPowViewController;
+- (MDFSearchResultsViewController *)initializeSearchResultsViewControllerWithResultSet:(NSSet *)resultSet;
+
+@end
+
+@interface MDFRootViewController(Presentation)
+
+- (void)presentSearchResultsControllerWithResultSet:(NSSet *)resultSet;
 
 @end
 
@@ -25,6 +34,9 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didReceiveTuneMyPowPowNotification:)
                                                  name:kMDFWelcomeViewControllerDidTouchPowPowMeNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didReceiveSearchCompletionNotification:) name:kMDFFetchSearchResultsContextDidCompleteNotification
                                                object:nil];
 }
 
@@ -38,6 +50,13 @@
     MDFTuneMyPowPowViewController *controller = [self initalizeTuneMyPowPowViewController];
 
     [self presentViewController:[self mainNavigationController:controller] animated:YES completion:nil];
+}
+
+- (void)didReceiveSearchCompletionNotification:(NSNotification *)notification
+{
+    NSLog(@"Received notification: %@", notification);
+    
+    [self presentSearchResultsControllerWithResultSet:notification.object];
 }
 
 @end
@@ -59,6 +78,23 @@
     return [[MDFTuneMyPowPowViewController alloc] initWithNibName:nil bundle:nil];
 }
 
+- (MDFSearchResultsViewController *)initializeSearchResultsViewControllerWithResultSet:(NSSet *)resultSet;
+{
+    return [[MDFSearchResultsViewController alloc] initWithNibName:nil
+                                                            bundle:nil
+                                                     searchResults:resultSet];
+}
+
+@end
+
+@implementation MDFRootViewController(Presentation)
+
+- (void)presentSearchResultsControllerWithResultSet:(NSSet *)resultSet
+{
+    MDFSearchResultsViewController *searchResultsController = [self initializeSearchResultsViewControllerWithResultSet:resultSet];
+    
+    [self.navigationController pushViewController:searchResultsController animated:NO];
+}
 @end
 
 @implementation MDFRootViewController

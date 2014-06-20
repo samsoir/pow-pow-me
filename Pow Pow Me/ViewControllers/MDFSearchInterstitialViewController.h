@@ -10,4 +10,6 @@
 
 @interface MDFSearchInterstitialViewController : UIViewController
 
+@property (nonatomic, strong) NSOperationQueue *operationQueue;
+
 @end
