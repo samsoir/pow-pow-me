@@ -11,6 +11,5 @@ When(/^I search for a far away, average priced, long weekend on the mountain$/) 
 end
 
 Then(/^I should see (\d+) search results$/) do |arg1|
-  pending
-#  raise("Failed to find #{arg1} search results") unless query("tableView", numberOfRowsInSection:0) == [ arg1.to_i ]
+  raise("Failed to find #{arg1} search results") unless query("tableView", numberOfRowsInSection:0) == [ arg1.to_i ]
 end

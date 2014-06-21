@@ -10,12 +10,14 @@
 #define __MDFSearchResultsViewController__
 
 #import <UIKit/UIKit.h>
+#import "MDFLargeCTAButton.h"
 
 @interface MDFSearchResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *searchResultsTableView;
 @property (nonatomic, strong) UIButton    *surpriseMeButton;
-@property (nonatomic, copy)   NSSet       *searchResults;
+@property (nonatomic, copy)   NSArray     *searchResults;
+@property (nonatomic, strong) MDFLargeCTAButton *randomSearchButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil searchResults:(NSSet *)resultsSet;
 

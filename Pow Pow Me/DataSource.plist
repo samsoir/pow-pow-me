@@ -8,7 +8,7 @@
 		<key>subtitle</key>
 		<string>Legendary Bowls</string>
 		<key>image</key>
-		<string></string>
+		<string>Whistler-CA</string>
 		<key>price</key>
 		<dict>
 			<key>value</key>
@@ -146,7 +146,7 @@
 		<key>subtitle</key>
 		<string>Legendary Bowls</string>
 		<key>image</key>
-		<string></string>
+		<string>Fernie-CA</string>
 		<key>price</key>
 		<dict>
 			<key>value</key>
@@ -284,7 +284,7 @@
 		<key>subtitle</key>
 		<string>The biggest skiing in America</string>
 		<key>image</key>
-		<string></string>
+		<string>BigSky-MT</string>
 		<key>price</key>
 		<dict>
 			<key>value</key>
@@ -422,7 +422,7 @@
 		<key>subtitle</key>
 		<string>There&apos;s only one tahoe</string>
 		<key>image</key>
-		<string></string>
+		<string>BigSky-MT</string>
 		<key>price</key>
 		<dict>
 			<key>value</key>
@@ -560,7 +560,7 @@
 		<key>subtitle</key>
 		<string></string>
 		<key>image</key>
-		<string></string>
+		<string>Whistler-CA</string>
 		<key>price</key>
 		<dict>
 			<key>value</key>

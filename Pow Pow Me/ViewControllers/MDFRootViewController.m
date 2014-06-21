@@ -92,7 +92,7 @@
 - (void)presentSearchResultsControllerWithResultSet:(NSSet *)resultSet
 {
     MDFSearchResultsViewController *searchResultsController = [self initializeSearchResultsViewControllerWithResultSet:resultSet];
-    
+        
     [self.navigationController pushViewController:searchResultsController animated:NO];
 }
 @end
