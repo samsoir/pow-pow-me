@@ -59,7 +59,7 @@
 - (void)initializeViewController
 {
     [self initializeTableView];
-//    [self initializeRandomSelectionButton];
+    [self initializeRandomSelectionButton];
 }
 
 - (void)initializeNavigationItems
