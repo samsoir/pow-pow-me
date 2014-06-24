@@ -1,3 +1,4 @@
+@focus
 Feature: Tune My Pow! Pow!
   In order to get the exact holiday I want
   As a Pow! Pow! Me customer
