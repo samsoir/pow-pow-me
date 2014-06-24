@@ -7,7 +7,8 @@ Feature: Tune My Pow! Pow!
     Given I am on the welcome screen
     When I touch the "Pow! Pow! Me" button
     Then I should see "Tune My Pow! Pow!"
-
+  
+  @focus
   Scenario: Perform tuned search
     Given I am on the "Tune My Pow! Pow!" screen
     When I touch "average price range"
