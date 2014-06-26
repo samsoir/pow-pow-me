@@ -1,3 +1,6 @@
 server_version
 exit
 exit
+launcher.relaunch
+backdoor("authenticateWithAccessToken:", "testToken123456")
+exit

@@ -60,4 +60,23 @@
     return [MDFRootViewController rootViewController];
 }
 
+#ifdef CALABASH
+
+- (NSString *)authenticateWithAccessToken:(NSString *)accessToken
+{
+    NSString *tokenReceivedString = [NSString stringWithFormat:@"Executed authenticateWithAccessToken: with \"%@\"", accessToken];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Backdoor"
+                                                        message:tokenReceivedString
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+    
+    [alertView show];
+    
+    return tokenReceivedString;
+}
+
+#endif
+
 @end
