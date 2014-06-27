@@ -1,0 +1,53 @@
+/* 
+  Titles.strings
+  Pow Pow Me
+
+  Created by Sam de Freyssinet on 28/04/2014.
+  Copyright (c) 2014 Maison de Freyssinet. All rights reserved.
+*/
+
+"PowPowMe"     = "Pow! Pow! Me";
+
+/* Welcome Screen */
+
+"Me"                         = "Me";
+"Help"                       = "Help";
+"Loading adventures"         = "Loading adventures";
+"possibe powder adventures"  = "%i possible powder adventures";
+
+/* Tune My Pow! Pow! */
+"TuneMyPowPow" = "Tune My Pow! Pow!";
+"LetsGo"       = "Lets Go!";
+
+"lowPrice"          = "$";
+"lowPriceRange"     = "low price range";
+
+"averagePrice"      = "$$";
+"averagePriceRange" = "average price range";
+
+"highPrice"         = "$$$";
+"highPriceRange"    = "high price range";
+
+"1-2hours"          = "1-2 hours";
+"oneToTwoHours"     = "one to two hours travel time";
+
+"3-5hours"          = "3-5 hours";
+"threeToFiveHours"  = "three to five hours travel time";
+
+"5+hours"           = "5+ hours";
+"fiveOrMore"        = "five or more hours travel time";
+
+"weekend"           = "weekend";
+"weekendOnMountain" = "weekend on the mountain";
+
+"long weekend"      = "long weekend";
+"longWeekendOnMountain" = "long weekend on the mountain";
+
+"week"              = "week";
+"weekOnMountain"    = "week or more on the mountain";
+
+/* Searching */
+"searchingTitle"    = "Shredding Pow! Pow!";
+"searchingMessage"  = "Bare with us while we search through thousands of potential powder expereinces to find the best three just for you!";
+
+"SurpriseMe"        = "Surprise me!";

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pow Pow Me-cal.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Pow Pow Me.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>7BA3B934190D792B000FD2E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ee766fb39d53c3b4dff7d444</key>
 		<dict>
 			<key>primary</key>
 			<true/>

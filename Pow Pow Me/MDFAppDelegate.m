@@ -7,14 +7,21 @@
 //
 
 #import "MDFAppDelegate.h"
+#import "MDFAppearanceManager.h"
+#import "MDFRootViewController.h"
 
 @implementation MDFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [MDFAppearanceManager paintApplicationAppearance];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+
+    [self.window setRootViewController:[self powPowRootViewController]];
+    
+    self.window.backgroundColor = [UIColor colorWithRed:(74/255.0) green:(74/255.0) blue:(74/255.0) alpha:1.0];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -45,5 +52,31 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Pow Pow RootViewController
+
+- (UIViewController *)powPowRootViewController
+{
+    return [MDFRootViewController rootViewController];
+}
+
+#ifdef CALABASH
+
+- (NSString *)authenticateWithAccessToken:(NSString *)accessToken
+{
+    NSString *tokenReceivedString = [NSString stringWithFormat:@"Executed authenticateWithAccessToken: with \"%@\"", accessToken];
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Backdoor"
+                                                        message:tokenReceivedString
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Dismiss"
+                                              otherButtonTitles:nil];
+    
+    [alertView show];
+    
+    return tokenReceivedString;
+}
+
+#endif
 
 @end
