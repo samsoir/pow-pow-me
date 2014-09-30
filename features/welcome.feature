@@ -14,3 +14,8 @@ Feature: Pow! Pow! Me Welcome Screen
     And I should see a "Me" button
     And I should see a "Help" button
     And I should see map search results
+
+  Scenario: Test example
+    When I put the application to sleep
+    Then my state should be saved
+    And 
